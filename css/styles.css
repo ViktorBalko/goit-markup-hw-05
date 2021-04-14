@@ -360,6 +360,11 @@ a {
 /* header */
 
 .header {
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(6, 107, 223, 0.575); */
   border-bottom: 1px solid #ececec;
 }
 
@@ -942,6 +947,9 @@ a {
 }
 
 .activity-inscription {
+  position: absolute;
+  bottom: 0;
+
   display: flex;
   width: 100%;
 
@@ -963,9 +971,9 @@ a {
   margin-top: 0px;
   padding-top: 27px;
   padding-bottom: 27px;
-  position: absolute;
-  bottom: 0;
 }
+
+
 
 
 
