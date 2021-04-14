@@ -59,6 +59,7 @@
   --active-btn-order: #188ce8;
   --main-icon-color: #afb1b8;
   --main-footer-social-icon-color: rgba(255, 255, 255, 0.1);
+  --activity-text-background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* body */
@@ -513,7 +514,8 @@ a {
 }
 
 .activity-box li + li {
-  padding-left: 30px;
+  /* padding-left: 30px; */
+  margin-left: 30px;
 }
 
 .activity-box img {
@@ -931,3 +933,39 @@ a {
   padding-left: 10px;
   margin-left: 0px;
 }
+
+
+/* зомашнее задание #5 */
+
+.activity-img {
+  position: relative;
+}
+
+.activity-inscription {
+  display: flex;
+  width: 100%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  align-items: center;
+
+  color: var(--white-color);
+  background: var(--activity-text-background-color);
+
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
