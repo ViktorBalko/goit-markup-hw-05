@@ -60,6 +60,8 @@
   --main-icon-color: #afb1b8;
   --main-footer-social-icon-color: rgba(255, 255, 255, 0.1);
   --activity-text-background-color: rgba(47, 48, 58, 0.8);
+  --backgroung-mosaic-active-color: rgba(33, 150, 243, 0.9);
+  --background-modal-color: rgba(0, 0, 0, 0.2);
 }
 
 /* body */
@@ -1006,6 +1008,79 @@ a {
   border-radius: 2px;
   background-color: var(--active-text-color); 
 }
+
+  /*  mosaic */
+
+.qqq {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 322px;
+  height: 168px;
+  left: 239px;
+  top: 325px;
+  background-color: var(--backgroung-mosaic-active-color);
+  color: var(--white-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+}
+
+  /* backdrop */
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.backdrop {
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: var(--background-modal-color);
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--white-color);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid green;
+}
+
+.modal-title {
+  color: red;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
 
  
 
