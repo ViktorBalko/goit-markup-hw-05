@@ -50,6 +50,7 @@
 
 :root {
   --white-color: #ffffff;
+  --black-color: #000000;
   --main-text-color: #212121;
   --second-text-color: #757575;
   --active-text-color: #2196f3;
@@ -780,12 +781,22 @@ a {
   width: 16px;
   height: 16px;
   stroke: var(--second-text-color);
+  margin-right: 7px;
 }
+
+.tel:focus .icon {
+  stroke: var(--active-text-color);
+} 
 
 .mail .icon {
   width: 16px;
   height: 16px;
   stroke: var(--second-text-color);
+  margin-right: 10px;
+}
+
+.mail:focus .icon {
+  stroke: var(--active-text-color);
 }
 
 .link-item .tel,
@@ -794,17 +805,14 @@ a {
   align-items: center;
 }
 
-.mail .icon {
-  margin-right: 10px;
-}
-
-.tel .icon {
-  margin-right: 7px;
-}
 
 .link-item:hover .icon {
   stroke: var(--active-text-color);
 }
+
+/* .link-item:focus .icon {
+  stroke: red;
+} */
 
 /* features */
 
@@ -998,7 +1006,8 @@ a {
   background-color: var(--white-color); 
 }
 
-.nav-button:hover:after {
+.nav-button:hover:after,
+.nav-button:focus:after {
   position: relative;
   top: 28px;
   content: "";
@@ -1034,13 +1043,15 @@ a {
 
 .backdrop.is-hidden {
   opacity: 0;
-  visibility: hidden;
+ /*  visibility: hidden;  */
   pointer-events: none;
   z-index: 100;
 }
 
 .backdrop {
   position: fixed;
+  opacity: 1;
+  transition: opacity 900ms ease-in-out;
   top:0;
   left: 0;
   background-color: var(--background-modal-color);
@@ -1048,11 +1059,16 @@ a {
   height: 100%;
 }
 
+.is-hidden .modal {
+  transform: translate(-20%, -50%);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 900ms ease-out;
   width: 100%;
   max-width: 528px;
   min-height: 581px;
@@ -1063,26 +1079,34 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
+  right: 20px;
+  top: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border: 2px solid green;
+  box-sizing: border-box;
 }
 
 .modal-title {
-  color: red;
-  font-weight: 700;
-  font-size: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  text-transform: uppercase;
+}
+
+.modal-close .icon {
+  width: 11px;
+  height: 11px;
+  fill: var(--black-color);
 }
 
 
- 
 
 
   
