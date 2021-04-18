@@ -1119,7 +1119,7 @@ a {
 
 .mosaic-link:hover .mosaic-hover-text,
 .mosaic-link:focus .mosaic-hover-text {
-  transition: transform 1100ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1100ms cubic-bezier(.52,.21,.44,.86);
   transform: translateX(0);
 }
 
